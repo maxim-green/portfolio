@@ -1,0 +1,10 @@
+@import "variables";
+
+.main {
+  flex-grow: 1;
+  max-width: 1180px;
+  min-height: 720px;
+  background-color: $main-background;
+  border-radius: $main-border-radius;
+  box-shadow: $main-box-shadow;
+}

@@ -1,0 +1,25 @@
+@import "variables";
+
+.wrapper {
+  padding: 0 10px;
+  background-color: $button-background-color;
+  color: $button-font-color;
+  border: $button-border-width solid $button-border-color;
+  border-radius: $button-border-radius;
+  height: $button-height;
+  @include materialHover();
+  &:hover {
+    cursor: pointer;
+    border-color: $button-border-color-hover;
+    .text {
+      color: $button-border-color-hover;
+    }
+  }
+}
+
+.text {
+  transition: inherit;
+  color: $button-font-color;
+  font-weight: 700;
+  text-align: center;
+}

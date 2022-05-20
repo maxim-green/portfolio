@@ -1,0 +1,17 @@
+.list {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+$item-color: #878787;
+$item-active-color: #ffffff;
+.item {
+  color: $item-color;
+  font-weight: 700;
+  margin: 0 20px;
+  transition: .3s;
+  &.active {
+    color: $item-active-color;
+  }
+}
