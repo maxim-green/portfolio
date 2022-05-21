@@ -2,6 +2,7 @@ import styles from '../styles/Navigation.module.scss'
 import Link from 'next/link'
 import React from 'react'
 import {useRouter} from 'next/router'
+import {useDispatch} from 'react-redux'
 
 const Navigation = () => {
     const {page} = useRouter().query

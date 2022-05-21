@@ -2,10 +2,11 @@ import styles from '../styles/Button.module.scss'
 import React from 'react'
 
 const Button: React.FC<{
-    children?: React.ReactElement | string
+    children?: Array<React.ReactElement | string> | React.ReactElement | string
     width?: number | string
-}> = ({children, width = 'auto'}) => {
-    return <button className={styles.wrapper} style={{width}}>
+    onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void
+}> = ({children, width = 'auto', onClick}) => {
+    return <button className={styles.wrapper} style={{width}} onClick={onClick}>
         <div className={styles.text}>{children}</div>
     </button>
 }
