@@ -12,7 +12,6 @@ $color-gold: #b0976d;
 $color-border: #222222;
 
 $card-border: 2px solid #444444;
-$card-width: 210px;
 
 .wrapper {
   display: inline-block;
@@ -41,7 +40,6 @@ $card-width: 210px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: $card-width;
     top: 16px;
     left: 16px;
     //transform: translateZ(100px) scale(0.9);
@@ -66,7 +64,6 @@ $card-width: 210px;
   }
 
   .content {
-    padding: 20px;
     display: none;
     pointer-events: none;
     &.visible {

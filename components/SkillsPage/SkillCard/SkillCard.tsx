@@ -13,14 +13,14 @@ const SkillCard: React.FC<{
     description
                        }) => {
     return <FloatingCard>
-        <div>
+        <div className={styles.content}>
             <div className={styles.image}>
                 <Image src={image} alt="" height={50} width={70}/>
             </div>
             <div className={styles.title}>{title}</div>
             <div className={styles.description}>{description}</div>
         </div>
-        <div>
+        <div className={styles.content}>
             <div className={styles.image}>
                 <Image src={image} alt="" height={50} width={70}/>
             </div>

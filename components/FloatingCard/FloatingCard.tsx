@@ -2,19 +2,21 @@ import React, {useEffect, useRef, useState} from 'react'
 import styles from './FloatingCard.module.scss'
 
 const FloatingCard: React.FC<{
-    children?: Array<React.ReactElement | string> | React.ReactElement | string
+    children?: Array<React.ReactElement | string> | React.ReactElement | string,
+    maxRotateX?: number,
+    maxRotateY?: number
 }> = ({
-          children
+          children,
+    maxRotateX= 10,
+    maxRotateY = 10
       }) => {
     const [wrapperTransform, setWrapperTransform] = useState('')
     const [mouseIn, setMouseIn] = useState(false)
     const [visibleChildIndex, setVisibleChildIndex] = useState(0)
     const [isTurning, setIsTurning] = useState(false)
     const wrapper = useRef<HTMLDivElement>(null)
-
-
-    const maxRotateX = 10
-    const maxRotateY = 10
+    const childrenLength = React.Children.count(children)
+    const clickable = childrenLength > 1
 
     const mouseMoveHandler = (event: React.MouseEvent) => {
         // Get mouse position
@@ -53,7 +55,6 @@ const FloatingCard: React.FC<{
 
     let timeout: ReturnType<typeof setTimeout>;
     const clickHandler = () => {
-        const childrenLength = React.Children.count(children)
         setIsTurning(true)
         timeout = setTimeout(() => {
             setVisibleChildIndex((prev) => (prev < childrenLength - 1) ? prev + 1 : 0)
@@ -72,20 +73,22 @@ const FloatingCard: React.FC<{
                 ref={wrapper}
                 style={{
                     transform: wrapperTransform,
-                    transition: !mouseIn ? '.2s cubic-bezier(0.5,0.1,0.1,3)' : undefined
+                    transition: !mouseIn ? '.2s cubic-bezier(0.5,0.1,0.1,3)' : undefined,
                 }}
-                onClick={clickHandler}
+                onClick={clickable ? clickHandler : undefined}
                 onMouseMove={mouseMoveHandler}
                 onMouseEnter={mouseEnterHandler}
                 onMouseLeave={mouseLeaveHandler}
             >
                 <div className={styles.border}>
                     {React.Children.map(children, (child, index) => {
-                        return <div className={`${styles.content} ${index === visibleChildIndex ? styles.visible : ''}` }>{child}</div>
+                        return <div
+                            className={`${styles.content} ${index === visibleChildIndex ? styles.visible : ''}` }
+                            style={{pointerEvents: clickable ? 'auto' : 'none'}}
+                        >{child}</div>
                     })}
                 </div>
             </div>
-
         </div>
     )
 }
