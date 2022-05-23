@@ -1,13 +1,12 @@
 import {useRouter} from 'next/router'
-import About from '../components/About'
+import AboutPage from 'components/AboutPage/AboutPage'
 import React, {useEffect} from 'react'
-import useDelayedUnmounting from '../hooks/useDelayedUnmounting'
 import {useDispatch, useSelector} from 'react-redux'
-import {isPage, setPage, setPhase} from '../redux/app/appSlice'
-import {RootState} from '../redux/store'
+import {isPage, setPage, setPhase} from 'redux/app/appSlice'
+import {RootState} from 'redux/store'
+import SkillsPage from 'components/SkillsPage/SkillsPage'
 
 const Page = () => {
-    const [phase, mount, unmount] = useDelayedUnmounting(500)
     const {page} = useRouter().query
     const currentPage = useSelector((state: RootState) => state.app.page)
     const currentPhase = useSelector((state:RootState) => state.app.phase)
@@ -34,10 +33,9 @@ const Page = () => {
 
         }
     },[page])
-    console.log(currentPhase)
-    // todo animation not working on second mounting
-    // todo component never receives 'unmounted' props. because of this styles never reset. maybe need to use keyframes instead of transition?
-    if (currentPage === 'about') return <About phase={currentPhase}/>
+
+    if (currentPage === 'about') return <AboutPage phase={currentPhase}/>
+    if (currentPage === 'skills') return <SkillsPage phase={currentPhase}/>
     return <div>{currentPage} - {currentPhase}</div>
 }
 

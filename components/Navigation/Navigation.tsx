@@ -1,4 +1,4 @@
-import styles from '../styles/Navigation.module.scss'
+import styles from 'components/Navigation/Navigation.module.scss'
 import Link from 'next/link'
 import React from 'react'
 import {useRouter} from 'next/router'

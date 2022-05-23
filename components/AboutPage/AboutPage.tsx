@@ -1,12 +1,12 @@
-import styles from '../styles/About.module.scss'
-import Avatar from '../components/Avatar'
+import styles from 'components/AboutPage/AboutPage.module.scss'
+import Avatar from 'components/Avatar/Avatar'
 import React from 'react'
-import Button from '../components/Button'
+import Button from 'components/Button/Button'
 import Link from 'next/link'
-import useDelayedUnmounting from '../hooks/useDelayedUnmounting'
-import Animated from './Animated/Animated'
+import Animated from 'components/Animated/Animated'
+import {PagePhases} from 'redux/app/appSlice'
 
-const About: React.FC<{phase: any}> = ({phase}) => {
+const AboutPage: React.FC<{phase: PagePhases}> = ({phase}) => {
     return (
         <div className={styles.wrapper}>
             <Animated phase={phase} delay={100}>
@@ -34,4 +34,4 @@ const About: React.FC<{phase: any}> = ({phase}) => {
     )
 }
 
-export default About
+export default AboutPage

@@ -1,4 +1,4 @@
-import styles from '../styles/Button.module.scss'
+import styles from 'components/Button/Button.module.scss'
 import React from 'react'
 
 const Button: React.FC<{

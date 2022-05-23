@@ -1,0 +1,77 @@
+// Floating card size
+$fc-width: 270px;
+$fc-height: 410px;
+
+// Border size and dasharray calculation
+$border-width: $fc-width - 32px;
+$border-height: $fc-height - 32px;
+$border-dasharray: ($border-width * 2) + ($border-height * 2);
+
+// Colors
+$color-gold: #b0976d;
+$color-border: #222222;
+
+$card-border: 2px solid #444444;
+$card-width: 210px;
+
+.wrapper {
+  display: inline-block;
+  //top: 50%;
+  //left: 50%;
+
+  //width: $fc-width;
+  //height: $fc-height;
+  //transform: translate(-50%, -50%);
+  perspective: 1000px;
+
+  .inner {
+    //position: relative;
+    transform-style: preserve-3d;
+    will-change: transform;
+    //transition: transform .1s cubic-bezier(0.5,-0.3,1,0.5);
+    &.turning {
+      .border {
+        transform: scaleX(0);
+      }
+    }
+  }
+
+  .border {
+    //position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: $card-width;
+    top: 16px;
+    left: 16px;
+    //transform: translateZ(100px) scale(0.9);
+    border: $card-border;
+    background-color: #333333;
+    border-radius: 10px;
+    z-index: -1;
+    transition: box-shadow .3s;
+    transition: background-color .3s;
+    cursor: auto;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+    transform: scaleX(1);
+    &--animated {
+      transform: scaleX(0);
+    }
+
+  }
+
+  .content {
+    padding: 20px;
+    display: none;
+    pointer-events: none;
+    &.visible {
+      display: block;
+    }
+  }
+
+}

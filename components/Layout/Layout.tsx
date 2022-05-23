@@ -1,7 +1,7 @@
-import styles from '../styles/Layout.module.scss'
-import MainCard from '../components/MainCard'
+import styles from 'components/Layout/Layout.module.scss'
+import MainCard from 'components/MainCard/MainCard'
 import React from 'react'
-import Navigation from '../components/Navigation'
+import Navigation from 'components/Navigation/Navigation'
 
 const Layout: React.FC<{children?: React.ReactElement}> = ({children}) => {
     return (

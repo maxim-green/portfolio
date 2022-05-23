@@ -21,7 +21,7 @@ const initialState: AppState = {
     page: 'about',
     phase: 'unmounted'
     // pages: [
-    //     {name: 'about', title: 'About me', phase: 'unmounted'},
+    //     {name: 'about', title: 'AboutPage me', phase: 'unmounted'},
     //     {name: 'skills', title: 'Skills', phase: 'unmounted'},
     //     {name: 'projects', title: 'Projects', phase: 'unmounted'},
     //     {name: 'contacts', title: 'Contacts', phase: 'unmounted'},
