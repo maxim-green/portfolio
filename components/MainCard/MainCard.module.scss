@@ -4,7 +4,8 @@
   flex-grow: 1;
   max-width: 1180px;
   min-height: 720px;
-  background-color: $main-background;
+  @include main-background();
+  outline: 10px solid rgba(#ffffff, .2);
   border-radius: $main-border-radius;
   box-shadow: $main-box-shadow;
 }

@@ -3,8 +3,47 @@
 
 html,
 body {
+  position: relative;
   padding: 0;
   margin: 0;
+  overflow: hidden;
+  &::after {
+    $bg-size: 2200px;
+    content: "";
+    position: absolute;
+    width: $bg-size;
+    height: $bg-size;
+    left: calc(50vw - $bg-size / 2);
+    top: calc(50vh - $bg-size / 2);
+    border-radius: 50%;
+    background: $app-background;
+    z-index: -2;
+    animation: bg-animation linear 30s infinite;
+  }
+  &::before {
+    $bg-size: 1250px;
+    content: "";
+    position: absolute;
+    width: $bg-size;
+    height: $bg-size;
+    left: calc(50vw - $bg-size / 2);
+    top: calc(50vh - $bg-size / 2);
+    border-radius: 50%;
+    background: $app-background;
+    z-index: -1;
+    animation: bg-animation linear 30s infinite;
+  }
+}
+
+@keyframes bg-animation {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+::selection {
+  color: #222222;
+  background-color: $app-color-accent;
 }
 
 a {
@@ -26,6 +65,7 @@ ul {
   padding: 0;
   list-style: none;
 }
+
 li {
   margin: 0;
   padding: 0;

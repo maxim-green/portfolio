@@ -6,6 +6,5 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: $app-background;
   @include app-font()
 }

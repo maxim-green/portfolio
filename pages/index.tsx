@@ -8,9 +8,7 @@ const Home: NextPage = () => {
         router.push('/about')
     }, [])
   return (
-    <div>
-        You shouldn't see that page.
-    </div>
+    <div></div>
   )
 }
 

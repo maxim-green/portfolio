@@ -25,7 +25,7 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    background-color: $app-color-accent;
+    background: $app-background;
   }
 }
 
@@ -58,6 +58,7 @@
   font-size: 14px;
   line-height: 16px;
   color: $link-color;
+  @include text-color-gradient();
   padding-bottom: 4px;
   &::after {
     position: absolute;
@@ -65,7 +66,7 @@
     width: 95%;
     height: 2px;
     border-radius: 1px;
-    background-color: $link-color;
+    background: $app-background;
     bottom: 0;
     left: 50%;
     transition: .15s;

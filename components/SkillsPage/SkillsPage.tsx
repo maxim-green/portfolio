@@ -11,6 +11,7 @@ const SkillsPage: React.FC<{phase: PagePhases}> = ({phase}) => {
                     <SkillCard
                         image={'/html-logo.svg'}
                         title={'HTML'}
+                        percentage={80}
                         description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '}
                     />
                 </Animated>
@@ -20,6 +21,7 @@ const SkillsPage: React.FC<{phase: PagePhases}> = ({phase}) => {
                     <SkillCard
                         image={'/sass-logo.svg'}
                         title={'SASS / SCSS'}
+                        percentage={40}
                         description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '}
                     />
                 </Animated>
@@ -29,6 +31,7 @@ const SkillsPage: React.FC<{phase: PagePhases}> = ({phase}) => {
                     <SkillCard
                         image={'/js-logo.svg'}
                         title={'JavaScript'}
+                        percentage={80}
                         description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '}
                     />
                 </Animated>
@@ -38,6 +41,7 @@ const SkillsPage: React.FC<{phase: PagePhases}> = ({phase}) => {
                     <SkillCard
                         image={'/react-logo.svg'}
                         title={'React / React Native'}
+                        percentage={80}
                         description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '}
                     />
                 </Animated>
@@ -47,6 +51,7 @@ const SkillsPage: React.FC<{phase: PagePhases}> = ({phase}) => {
                     <SkillCard
                         image={'/redux-logo.svg'}
                         title={'Redux'}
+                        percentage={80}
                         description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '}
                     />
                 </Animated>
@@ -56,6 +61,7 @@ const SkillsPage: React.FC<{phase: PagePhases}> = ({phase}) => {
                     <SkillCard
                         image={'/node-logo.svg'}
                         title={'Node.js'}
+                        percentage={80}
                         description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '}
                     />
                 </Animated>

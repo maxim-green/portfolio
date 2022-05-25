@@ -1,7 +1,9 @@
+@import '../../styles/variables';
+
 .wrapper {
-  width: 250px;
-  height: 250px;
-  background: linear-gradient(90deg, #62AEF4 0%, #007CED 100%);
+  width: 230px;
+  height: 230px;
+  background: $avatar-gradient;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
   border-radius: 50%;
   display: flex;

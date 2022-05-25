@@ -1,7 +1,7 @@
 @import 'styles/variables';
 
 .wrapper {
-  margin-top: 70px;
+  margin-top: 90px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -10,20 +10,22 @@
 }
 
 .title {
-  margin: 30px 0;
+  margin: 20px 0 10px;
   color: $title-font-color;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 48px;
-  line-height: 48px;
+  line-height: 54px;
 }
 
 .text {
   max-width: 480px;
+  color: #e8e8e8;
+  font-size: 20px;
   text-align: center;
 }
 
 .buttons {
-  margin-top: 30px;
+  margin-top: 40px;
   width: 380px;
   display: flex;
   justify-content: space-between;

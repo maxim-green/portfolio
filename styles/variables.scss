@@ -1,5 +1,5 @@
-$app-color-accent: #007CED;
-$app-background: #007CED;
+$app-color-accent: #0acffe;
+$app-background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
 $app-font-family: 'Ubuntu', sans-serif;
 $app-font-color: #B3B3B3;
 $app-font-size: 16px;
@@ -11,23 +11,32 @@ $app-line-height: 1.2em;
   line-height: $app-line-height;
 }
 
-$main-background: #222222;
+@mixin main-background() {
+  background: linear-gradient(150deg, #434343 -20%, black 150%);
+}
 $main-border-radius: 50px;
 $main-box-shadow: 0 19px 80px rgba(0,0,0,0.25), 0 15px 24px rgba(0,0,0,0.15);
 
-$link-color: #64AFF4;
+$link-color: #0acffe;
 
 $title-font-color: #ffffff;
 
 $button-font-color: #ffffff;
+$button-font-color-hover: #e0c3fc;
 $button-background-color: #444444;
 $button-border-width: 2px;
 $button-border-color: #ffffff;
-$button-border-color-hover: #64AFF4;
+$button-border-color-hover: $app-background;
 $button-height: 44px;
 $button-border-radius: $button-height / 2;
 
+$avatar-gradient: $app-background;
 
+@mixin text-color-gradient($gradient: $app-background) {
+  background: $gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 @mixin materialHover() {
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -35,5 +44,16 @@ $button-border-radius: $button-height / 2;
   &:hover {
     cursor: pointer;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+}
+
+// apply to parent, not pseudo-element itself
+@mixin pseudo {
+  position: relative;
+  &::before, &::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
   }
 }
