@@ -8,12 +8,12 @@ const SkillCard: React.FC<{
     image: string,
     title: string,
     percentage: number,
-    description: string
+    children: React.ReactElement | string
 }> = ({
     image,
     title,
     percentage,
-    description
+    children
                        }) => {
     return <FloatingCard>
         <div className={styles.content}>
@@ -24,11 +24,8 @@ const SkillCard: React.FC<{
             <div className={styles.description}><PercentageWheel percentage={percentage}/></div>
         </div>
         <div className={styles.content}>
-            <div className={styles.image}>
-                <Image src={image} alt="" height={50} width={70}/>
-            </div>
-            <div className={styles.title}>Second Side</div>
-            <div className={styles.description}>{description}</div>
+            <div className={styles.title}>I know</div>
+            <div className={styles.description}>{children}</div>
         </div>
     </FloatingCard>
 }

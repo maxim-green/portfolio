@@ -6,6 +6,7 @@ import {isPage, setPage, setPhase} from 'redux/app/appSlice'
 import {RootState} from 'redux/store'
 import SkillsPage from 'components/SkillsPage/SkillsPage'
 import ProjectsPage from 'components/ProjectsPage/ProjectsPage'
+import ContactsPage from 'components/ContactsPage/ContactsPage'
 
 const Page = () => {
     const {page} = useRouter().query
@@ -38,6 +39,7 @@ const Page = () => {
     if (currentPage === 'about') return <AboutPage phase={currentPhase}/>
     if (currentPage === 'skills') return <SkillsPage phase={currentPhase}/>
     if (currentPage === 'projects') return <ProjectsPage phase={currentPhase}/>
+    if (currentPage === 'contacts') return <ContactsPage phase={currentPhase}/>
     return <div>{currentPage} - {currentPhase}</div>
 }
 

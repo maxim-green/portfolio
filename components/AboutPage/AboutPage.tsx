@@ -6,6 +6,7 @@ import Link from 'next/link'
 import Animated from 'components/Animated/Animated'
 import {PagePhases} from 'redux/app/appSlice'
 
+
 const AboutPage: React.FC<{phase: PagePhases}> = ({phase}) => {
     return (
         <div className={styles.wrapper}>

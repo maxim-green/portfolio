@@ -1,28 +1,34 @@
 import FloatingCard from 'components/FloatingCard/FloatingCard'
 import styles from './ProjectCard.module.scss'
-import Image from 'next/image'
+import Image, {StaticImageData} from 'next/image'
 import Button from 'components/Button/Button'
+import React from 'react'
+import Link from 'next/link'
 
-const ProjectCard = () => {
+const ProjectCard: React.FC<{
+    image: string | StaticImageData
+    title: string
+    usedTechnologies: string[]
+    websiteUrl: string
+    githubUrl: string
+}> = ({image, title, usedTechnologies, websiteUrl, githubUrl}) => {
     return (
         <FloatingCard maxRotateX={2} maxRotateY={2}>
             <div className={styles.content}>
                 <div className={styles.image}>
-                    <Image src={'/project1.png'} width={280} height={190}/>
+                    <Image src={image} width={280} height={190}/>
                 </div>
                 <div className={styles.title}>
-                    Artist Portfolio Website
+                    {title}
                 </div>
                 <div className={styles.description}>
                     <ul>
-                        <li>HTML / CSS / JavaScript</li>
-                        <li>Next.js</li>
-                        <li>Strapi CMS</li>
+                        {usedTechnologies.map(tech => <li>{tech}</li>)}
                     </ul>
                 </div>
                 <div className={styles.links}>
-                    <Button width={180} onClick={() => console.log('click')}>Visit website</Button>
-                    <a href="#" className={styles.link}>View on GitHub</a>
+                    <Link href={websiteUrl}><a><Button width={180}>Visit website</Button></a></Link>
+                    <a href={githubUrl} className={styles.link}>View on GitHub</a>
                 </div>
             </div>
         </FloatingCard>

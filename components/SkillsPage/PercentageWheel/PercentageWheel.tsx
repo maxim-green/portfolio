@@ -1,22 +1,14 @@
 import React from 'react'
 import styles from './PercentageWheel.module.scss'
-import circle from '../../../public/circle-path.svg'
-import Image from 'next/image'
 
 const PercentageWheel: React.FC<{ percentage: number }> = ({percentage}) => {
-    //-135deg == 0%, 45deg == 50%, 225deg == 100%
-    const fillerRotation = -135 + 3.6 * percentage
     return (
         <div className={styles.wrapper}>
             <div className={styles.text}>{percentage}%</div>
             <div className={styles.wheel}>
-                {/*<CircleSVG/>*/}
-                <CircleSVG percentage={percentage}/>
+                <div className={styles.filler}><CircleSVG percentage={percentage}/></div>
+                <div className={styles.background}><CircleSVG percentage={100}/></div>
             </div>
-            {/*<div className={styles.empty}/>*/}
-            {/*<div className={styles.filler} style={{transform: `translateX(-50%) translateY(-50%) rotate(${fillerRotation}deg)`}}/>*/}
-            {/*{percentage < 50 && <div className={styles.mask}/>}*/}
-            {/*{percentage > 50 && <div className={styles.halfFill}/>}*/}
         </div>
     )
 }

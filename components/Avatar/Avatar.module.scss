@@ -10,6 +10,8 @@
   align-items: center;
   justify-content: center;
   img {
+    image-rendering: crisp-edges;
+    will-change: transform;
     border-radius: 50%;
   }
 }
