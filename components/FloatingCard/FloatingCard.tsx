@@ -64,7 +64,7 @@ const FloatingCard: React.FC<{
 
     useEffect(() => {
         return () => clearTimeout(timeout)
-    }, [])
+    })
 
     return (
         <div className={styles.wrapper}>

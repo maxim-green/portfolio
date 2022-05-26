@@ -34,7 +34,7 @@ const Page = () => {
             }
 
         }
-    },[page])
+    },[page, dispatch])
 
     if (currentPage === 'about') return <AboutPage phase={currentPhase}/>
     if (currentPage === 'skills') return <SkillsPage phase={currentPhase}/>

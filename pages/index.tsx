@@ -6,7 +6,7 @@ const Home: NextPage = () => {
     const router = useRouter()
     useEffect(() => {
         router.push('/about')
-    }, [])
+    }, [router])
   return (
     <div></div>
   )

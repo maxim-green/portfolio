@@ -6,7 +6,7 @@ import React from 'react'
 import Link from 'next/link'
 
 const ProjectCard: React.FC<{
-    image: string | StaticImageData
+    image: string
     title: string
     usedTechnologies: string[]
     websiteUrl: string
@@ -16,14 +16,14 @@ const ProjectCard: React.FC<{
         <FloatingCard maxRotateX={2} maxRotateY={2}>
             <div className={styles.content}>
                 <div className={styles.image}>
-                    <Image src={image} width={280} height={190}/>
+                    <img src={image} width={280} height={190} alt={'project image'}/>
                 </div>
                 <div className={styles.title}>
                     {title}
                 </div>
                 <div className={styles.description}>
                     <ul>
-                        {usedTechnologies.map(tech => <li>{tech}</li>)}
+                        {usedTechnologies.map((tech, index) => <li key={index}>{tech}</li>)}
                     </ul>
                 </div>
                 <div className={styles.links}>

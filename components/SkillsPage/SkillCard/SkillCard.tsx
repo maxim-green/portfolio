@@ -18,7 +18,7 @@ const SkillCard: React.FC<{
     return <FloatingCard>
         <div className={styles.content}>
             <div className={styles.image}>
-                <Image src={image} alt="" height={50} width={70}/>
+                <img src={image} alt="" height={50} width={70}/>
             </div>
             <div className={styles.title}>{title}</div>
             <div className={styles.description}><PercentageWheel percentage={percentage}/></div>
