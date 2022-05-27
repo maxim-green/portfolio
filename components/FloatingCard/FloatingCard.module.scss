@@ -34,6 +34,11 @@ $card-border: 2px solid #444444;
       }
     }
   }
+  @media (max-width: 1024px) {
+    .inner {
+      transform: none !important;
+    }
+  }
 
   .border {
     //position: absolute;

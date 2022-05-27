@@ -6,6 +6,7 @@ import Navigation from 'components/Navigation/Navigation'
 const Layout: React.FC<{children?: React.ReactElement}> = ({children}) => {
     return (
         <div className={styles.layout}>
+            <div className={styles.background}/>
             <MainCard>
                 <Navigation/>
                 {children}

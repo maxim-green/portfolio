@@ -6,8 +6,18 @@
   flex-grow: 1;
   max-width: 1180px;
   min-height: 720px;
+  margin: 30px;
   @include main-background();
   outline: 10px solid rgba(#ffffff, .2);
   border-radius: $main-border-radius;
   box-shadow: $main-box-shadow;
+}
+
+@media (max-width: 550px) {
+  .main {
+    min-height: 100vh;
+    margin: 0;
+    border-radius: 0;
+    outline: none;
+  }
 }

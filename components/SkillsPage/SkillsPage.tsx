@@ -23,7 +23,7 @@ const SkillsPage: React.FC<{ phase: PagePhases }> = ({phase}) => {
                     </SkillCard>
                 </Animated>
             </div>
-            <div style={{margin: 15}}>
+            <div className={styles.cardWrapper}>
                 <Animated phase={phase} delay={100}>
                     <SkillCard
                         image={'/sass-logo.svg'}
@@ -42,7 +42,7 @@ const SkillsPage: React.FC<{ phase: PagePhases }> = ({phase}) => {
                     </SkillCard>
                 </Animated>
             </div>
-            <div style={{margin: 15}}>
+            <div className={styles.cardWrapper}>
                 <Animated phase={phase} delay={200}>
                     <SkillCard
                         image={'/js-logo.svg'}
@@ -61,7 +61,7 @@ const SkillsPage: React.FC<{ phase: PagePhases }> = ({phase}) => {
                     </SkillCard>
                 </Animated>
             </div>
-            <div style={{margin: 15}}>
+            <div className={styles.cardWrapper}>
                 <Animated phase={phase} delay={300}>
                     <SkillCard
                         image={'/react-logo.svg'}
@@ -79,7 +79,7 @@ const SkillsPage: React.FC<{ phase: PagePhases }> = ({phase}) => {
                     </SkillCard>
                 </Animated>
             </div>
-            <div style={{margin: 15}}>
+            <div className={styles.cardWrapper}>
                 <Animated phase={phase} delay={400}>
                     <SkillCard
                         image={'/redux-logo.svg'}
@@ -95,7 +95,7 @@ const SkillsPage: React.FC<{ phase: PagePhases }> = ({phase}) => {
                     </SkillCard>
                 </Animated>
             </div>
-            <div style={{margin: 15}}>
+            <div className={styles.cardWrapper}>
                 <Animated phase={phase} delay={500}>
                     <SkillCard
                         image={'/node-logo.svg'}
