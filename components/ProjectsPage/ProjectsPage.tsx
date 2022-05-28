@@ -24,6 +24,7 @@ const ProjectsPage: React.FC<{ phase: PagePhases }> = ({phase}) => {
                         image={'/project2.png'}
                         title={'Meditation Mobile App'}
                         usedTechnologies={['JavaScript', 'React Native', 'Redux (Redux Toolkit)']}
+                        buttonCaption={'Download APK'}
                         websiteUrl={'https://github.com/maxim-green/meditationapp/releases/download/mobile/meditation-app.apk'}
                         githubUrl={'https://github.com/maxim-green/meditationapp'}
                     />
