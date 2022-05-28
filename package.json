@@ -4,9 +4,9 @@
   "private": true,
   "homepage": "https://maxim-green.github.io/portfolio/",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 4500",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 4500",
     "lint": "next lint",
     "deploy": "gh-pages -d out"
   },
