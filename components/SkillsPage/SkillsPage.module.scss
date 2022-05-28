@@ -2,14 +2,22 @@
 
 .wrapper {
   margin: 0 auto;
-  width: 780px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
+  padding: 0 50px 30px;
 }
 
 .cardWrapper {
-  margin: 15px;
+  margin: 15px 30px;
+}
+@media (max-width: 720px) {
+  .wrapper {
+    padding: 0 10px 20px;
+  }
+  .cardWrapper {
+    margin: 10px 10px;
+  }
 }
 
 .descriptionList {

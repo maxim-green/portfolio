@@ -8,7 +8,7 @@ const Home: NextPage = () => {
         router.push('/about')
     }, [router])
   return (
-    <div></div>
+    <div/>
   )
 }
 

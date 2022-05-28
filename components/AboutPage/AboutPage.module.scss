@@ -10,11 +10,12 @@
 }
 
 .title {
-  margin: 20px 0 10px;
+  margin: 20px 30px 20px;
   color: $title-font-color;
   font-weight: 400;
   font-size: 48px;
-  line-height: 54px;
+  line-height: 40px;
+  text-align: center;
 }
 
 .text {
@@ -29,4 +30,17 @@
   width: 380px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 420px) {
+  .buttons {
+    width: 100%;
+    flex-direction: column;
+    height: 100px;
+  }
+}
+@media (max-width: 360px) {
+  .title {
+    font-size: 42px;
+  }
 }

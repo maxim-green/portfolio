@@ -1,10 +1,47 @@
 @import "styles/variables";
 
 .layout {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
-  @include app-font()
+  @include app-font();
+}
+
+.background {
+
+  z-index: -10;
+  &::after {
+    $bg-size: 2200px;
+    content: "";
+    position: fixed;
+    width: $bg-size;
+    height: $bg-size;
+    left: calc(50vw - $bg-size / 2);
+    top: calc(50vh - $bg-size / 2);
+    border-radius: 50%;
+    background: $app-background;
+    z-index: -2;
+    animation: bg-animation linear 30s infinite;
+  }
+  &::before {
+    $bg-size: 1250px;
+    content: "";
+    position: fixed;
+    width: $bg-size;
+    height: $bg-size;
+    left: calc(50vw - $bg-size / 2);
+    top: calc(50vh - $bg-size / 2);
+    border-radius: 50%;
+    background: $app-background;
+    z-index: -1;
+    animation: bg-animation linear 10s infinite;
+  }
+}
+
+@keyframes bg-animation {
+  to {
+    transform: rotate(360deg);
+  }
 }
