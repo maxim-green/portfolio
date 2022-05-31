@@ -33,7 +33,7 @@ const ProjectsPage: React.FC<{ phase: PagePhases }> = ({phase}) => {
                 <Animated phase={phase} delay={200}>
                     <ProjectCard
                         image={'/project3.png'}
-                        title={'Meditation Mobile App'}
+                        title={'Social Network App'}
                         usedTechnologies={['HTML / SCSS / JavaScript', 'React', 'Redux', 'Express', 'MongoDB', 'Socket.io']}
                         websiteUrl={'https://bind.maxgeorgievsky.ru'}
                         githubUrl={'https://github.com/maxim-green/react-social-network'}
