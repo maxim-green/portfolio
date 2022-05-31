@@ -4,11 +4,10 @@
   "private": true,
   "homepage": "https://maxim-green.github.io/portfolio/",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build && next export",
-    "start": "next start",
-    "lint": "next lint",
-    "deploy": "gh-pages -d out"
+    "dev": "next dev -p 4500",
+    "build": "next build",
+    "start": "next start -p 4500",
+    "lint": "next lint"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.1",

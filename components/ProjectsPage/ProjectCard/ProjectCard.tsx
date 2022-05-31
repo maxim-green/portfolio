@@ -11,7 +11,8 @@ const ProjectCard: React.FC<{
     usedTechnologies: string[]
     websiteUrl: string
     githubUrl: string
-}> = ({image, title, usedTechnologies, websiteUrl, githubUrl}) => {
+    buttonCaption?: string
+}> = ({image, title, usedTechnologies, websiteUrl, githubUrl, buttonCaption= 'Visit website'}) => {
     return (
         <FloatingCard maxRotateX={2} maxRotateY={2}>
             <div className={styles.content}>
@@ -27,7 +28,7 @@ const ProjectCard: React.FC<{
                     </ul>
                 </div>
                 <div className={styles.links}>
-                    <Link href={websiteUrl}><a><Button width={180}>Visit website</Button></a></Link>
+                    <Link href={websiteUrl}><a><Button width={180}>{buttonCaption}</Button></a></Link>
                     <a href={githubUrl} className={styles.link}>View on GitHub</a>
                 </div>
             </div>

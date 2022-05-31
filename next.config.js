@@ -6,6 +6,7 @@ const nextConfig = withPlugins([
   optimizedImages
 ], {
   reactStrictMode: true,
+  distDir: 'build',
   // assetPrefix: process.env.NODE_ENV === 'production' ? '/portfolio' : ''
 })
 
